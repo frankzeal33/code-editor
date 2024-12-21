@@ -1,3 +1,5 @@
-module.exports = { 
-  typescript: { ignoreBuildErrors: true, }, 
+module.exports = {
+  experimental: {
+    missingSuspenseWithCSRBailout: false,
+  },
 }
