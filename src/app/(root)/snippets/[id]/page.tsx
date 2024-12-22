@@ -10,7 +10,7 @@ import { Editor } from "@monaco-editor/react";
 import { defineMonacoThemes, LANGUAGE_CONFIG } from "@/app/(root)/_constants";
 import CopyButton from "./_components/CopyButton";
 import Comments from "./_components/Comments";
-import {Suspense} from "react";
+
 
 function SnippetDetailPage() {
   const snippetId = useParams().id;
@@ -21,7 +21,6 @@ function SnippetDetailPage() {
   if (snippet === undefined) return <SnippetLoadingSkeleton />;
 
   return (
-    <Suspense fallback={<>Loading...</>}>
     <div className="min-h-screen bg-[#0a0a0f]">
       <NavigationHeader />
 
@@ -97,7 +96,6 @@ function SnippetDetailPage() {
         </div>
       </main>
     </div>
-    </Suspense>
   );
 }
 export default SnippetDetailPage;
